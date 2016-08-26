@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 // On first load, show home view
 showLoading("#main-content");
-$ajaxUtils.sendGetRequest(
+  $ ajaxUtils.sendGetRequest(
   homeHtml,
   function (responseText) {
     document.querySelector("#main-content")
@@ -68,7 +68,7 @@ $ajaxUtils.sendGetRequest(
 // Load the menu categories view
 dc.loadMenuCategories = function () {
   showLoading("#main-content");
-  $ajaxUtils.sendGetRequest(
+  $ ajaxUtils.sendGetRequest(
     allCategoriesUrl,
     buildAndShowCategoriesHTML);
 };
@@ -78,11 +78,11 @@ dc.loadMenuCategories = function () {
 // from the server
 function buildAndShowCategoriesHTML (categories) {
   // Load title snippet of categories page
-  $ajaxUtils.sendGetRequest(
+  $ ajaxUtils.sendGetRequest(
     categoriesTitleHtml,
     function (categoriesTitleHtml) {
       // Retrieve single category snippet
-      $ajaxUtils.sendGetRequest(
+      $ ajaxUtils.sendGetRequest(
         categoryHtml,
         function (categoryHtml) {
           var categoriesViewHtml =
